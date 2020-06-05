@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Time: 16:51
  */
 @SpringBootApplication
+// 扫描mapper所在的包 开启注解 mapper接口可以不添加@mapper注解
 /*@MapperScan("com.javalow.mapper")*/
 public class JavaLowApplication {
 
