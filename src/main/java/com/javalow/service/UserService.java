@@ -2,6 +2,8 @@ package com.javalow.service;
 
 import com.javalow.domain.User;
 
+import java.util.List;
+
 /**
  * @Description: 用户接口
  * @Author: huweixing
@@ -11,6 +13,17 @@ import com.javalow.domain.User;
  */
 public interface UserService {
 
-    public User getUserById(Integer userId);
+    /**
+     * 查询所有用户列表
+     *
+     * @return List
+     */
+    List<User> getAllUser();
+
+    /**
+     * @param userId 用户id
+     * @return User
+     */
+    User getUserById(Integer userId);
 
 }
