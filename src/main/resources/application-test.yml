@@ -1,0 +1,20 @@
+# 配置 端口和访问路径
+server:
+  port: 11091
+  servlet:
+    context-path: /javalow
+# 配置数据源
+spring:
+  profiles:
+    active: dev #dev|test|prod
+  datasource:
+    url: jdbc:mysql://localhost:3306/test_db?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    cluster:
+      nodes: 127.0.0.1:16159,127.0.0.1:16158,127.0.0.1:16157,127.0.0.1:16156,127.0.0.1:16155,127.0.0.1:16154
+      max-redirects: 12
+      timeout: 6000
+      password:
