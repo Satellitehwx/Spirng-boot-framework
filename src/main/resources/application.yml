@@ -1,7 +1,6 @@
-# 配置数据源
 spring:
   profiles:
-    active: test #dev|test|prod
+    active: dev #dev|test|prod
 
 # 配置mybatis扫描
 mybatis:

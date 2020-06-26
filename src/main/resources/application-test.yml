@@ -1,6 +1,6 @@
 # 配置 端口和访问路径
 server:
-  port: 11091
+  port: 11093
   servlet:
     context-path: /javalow
 # 配置数据源
@@ -12,8 +12,12 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
-  redis:
-    cluster:
+  redis: # redis 配置
+    type: single # single|cluster
+    host: 127.0.0.1  #单机的主机ip
+    port: 16159
+    password:
+    cluster: # 集群配置
       nodes: 127.0.0.1:16159,127.0.0.1:16158,127.0.0.1:16157,127.0.0.1:16156,127.0.0.1:16155,127.0.0.1:16154
       max-redirects: 12
       timeout: 6000

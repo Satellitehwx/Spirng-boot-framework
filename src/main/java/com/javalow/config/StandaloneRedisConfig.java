@@ -17,11 +17,11 @@ import org.springframework.context.annotation.Configuration;
 @Setter
 @Configuration
 @ConfigurationProperties(prefix = "spring.redis")
-@ConditionalOnProperty(name = {"spring.redis.host"})
+@ConditionalOnProperty(name = {"spring.redis.type"}, havingValue = "single")
 public class StandaloneRedisConfig {
 
     private String host;
 
-    private int port;
+    private Integer port;
 
 }
